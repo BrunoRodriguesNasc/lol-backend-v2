@@ -1,0 +1,1 @@
+export const API_KEY = 'RGAPI-0b5ae55f-a25d-45c7-abab-f1f26b2595ff';
