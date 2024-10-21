@@ -7,7 +7,7 @@ export class AccountController {
     
     @Get('/:name/:tag')
     async getAccount(@Param('name') name: string, @Param('tag') tag: string, @Res() res) {
-
+   
         const data = await this.accountService.getAccount(name, tag);
         res.send(data);
     }
