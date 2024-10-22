@@ -1,7 +1,5 @@
 # 🔥 League of Legends Stats API
 
-![Logo](https://yourlogo.com/logo.png)
-
 ## 🎮 Descrição
 
 Seja bem-vindo(a) à **League of Legends Stats API**, uma réplica em miniatura do famoso site [OP.GG](https://op.gg), construída usando **NestJS**. Esta API oferece uma coleção de serviços que acessam os dados da Riot Games, permitindo que você obtenha informações detalhadas sobre contas de jogadores, campeões, partidas e muito mais! 🏆
