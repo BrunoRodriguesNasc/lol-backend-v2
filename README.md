@@ -30,10 +30,10 @@ Seja bem-vindo(a) à **League of Legends Stats API**, uma réplica em miniatura 
 
 ### Champions
 - **GET** `/champions/`: Retorna todos os campeões.
-- **GET** `/champions/winrate`: Retorna taxa de vitória dos campeões.
+- **GET** `/champions/:name`: Retorna um campeão espeficico
 
 ### Summoner
-- **GET** `/summoner/:summonerName`: Retorna dados de um invocador.
+- **GET** `/summoner/:puuid`: Retorna dados de um invocador.
 
 ### Match
 - **GET** `/match/getById/:matchId`: Retorna detalhes de uma partida pelo ID.
@@ -45,13 +45,13 @@ Seja bem-vindo(a) à **League of Legends Stats API**, uma réplica em miniatura 
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/league-of-legends-api.git
+git clone https://github.com/BrunoRodriguesNasc/lol-backend-v2.git
 ```
 
 2. Instale as dependências:
 
 ```bash
-cd league-of-legends-api
+cd lol-backend-v2
 npm install
 ```
 
@@ -65,7 +65,7 @@ JWT_SECRET=your-jwt-secret
 4. Inicie a aplicação:
 
 ```bash
-npm run start
+npm run start:dev
 ```
 
 ---
