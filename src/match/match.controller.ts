@@ -7,8 +7,14 @@ export class MatchController {
     }
 
     @Get(':puuid')
-    async getMatchByPuuid(@Param('puuid') puuid: string, @Res() res) {
-        const data = await this.matchService.getMatchByPuuid(puuid);
+    async getMatchsByPuuid(@Param('puuid') puuid: string, @Res() res) {
+        const data = await this.matchService.getMatchByPuuids(puuid);
+        return res.send(data);
+    }
+
+    @Get('/getById/:matchId')
+    async getMatchById(@Param('matchId') matchId: string, @Res() res) {
+        const data = await this.matchService.getMatchById(matchId);
         return res.send(data);
     }
 

@@ -7,6 +7,8 @@ import { SummonerModule } from './summoner/summoner.module';
 import { MatchModule } from './match/match.module';
 import { AuthModule } from './auth/auth.module';
 import { AccountModule } from './account/account.module';
+import { LeaderboardsModule } from './leaderboards/leaderboards.module';
+import { LiveGameModule } from './live-game/live-game.module';
 
 @Module({
   imports: [
@@ -16,7 +18,7 @@ import { AccountModule } from './account/account.module';
     ChampionsModule,
     SummonerModule,
     MatchModule, 
-    AuthModule, AccountModule,
+    AuthModule, AccountModule, LeaderboardsModule, LiveGameModule,
   ],
   controllers: [AppController],
   providers: [AppService],
