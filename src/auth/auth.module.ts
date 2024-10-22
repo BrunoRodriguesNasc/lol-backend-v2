@@ -10,8 +10,8 @@ import { AuthController } from './auth.controller';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
-        secret: configService.get<string>('JWT_SECRET'), // Pega a chave secreta do arquivo .env
-        signOptions: { expiresIn: '1h' }, // Tempo de expiração do token
+        secret: configService.get<string>('JWT_SECRET'), 
+        signOptions: { expiresIn: '1h' },
       }),
     }),
   ],
