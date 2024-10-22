@@ -1,86 +1,106 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🔥 League of Legends Stats API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![Logo](https://yourlogo.com/logo.png)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 🎮 Descrição
 
-## Description
+Seja bem-vindo(a) à **League of Legends Stats API**, uma réplica em miniatura do famoso site [OP.GG](https://op.gg), construída usando **NestJS**. Esta API oferece uma coleção de serviços que acessam os dados da Riot Games, permitindo que você obtenha informações detalhadas sobre contas de jogadores, campeões, partidas e muito mais! 🏆
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+## 📜 Funcionalidades
+
+- **Account**: Consulte dados sobre as contas de jogadores da Riot Games, como ID e nome de usuário.
+- **Auth**: Sistema de autenticação seguro para garantir o uso da API.
+- **Summoner**: Obtenha detalhes sobre invocadores, incluindo nome, nível e estatísticas gerais.
+- **Match**: Acesse informações detalhadas sobre o histórico de partidas dos jogadores.
+- **Champions**: Explore os dados dos campeões, incluindo taxas de vitória e outros detalhes importantes.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **NestJS**: Framework Node.js para construção de APIs robustas e escaláveis.
+- **Riot Games API**: Interface poderosa para acessar os dados do League of Legends.
+- **Axios**: Cliente HTTP para realizar requisições à API da Riot.
+- **JSON Web Token (JWT)**: Implementação de autenticação e segurança.
+- **Dotenv**: Gerenciamento de variáveis de ambiente.
+
+---
+
+## 📚 Endpoints Principais
+
+### Champions
+- **GET** `/champions/`: Retorna todos os campeões.
+- **GET** `/champions/winrate`: Retorna taxa de vitória dos campeões.
+
+### Summoner
+- **GET** `/summoner/:summonerName`: Retorna dados de um invocador.
+
+### Match
+- **GET** `/match/getById/:matchId`: Retorna detalhes de uma partida pelo ID.
+
+---
+
+## ⚙️ Instalação e Configuração
+
+1. Clone este repositório:
 
 ```bash
-$ npm install
+git clone https://github.com/seu-usuario/league-of-legends-api.git
 ```
 
-## Compile and run the project
+2. Instale as dependências:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+cd league-of-legends-api
+npm install
 ```
 
-## Run tests
+3. Configure as variáveis de ambiente criando um arquivo `.env` na raiz do projeto com as seguintes chaves:
+
+```
+RIOT_API_KEY=your-riot-api-key
+JWT_SECRET=your-jwt-secret
+```
+
+4. Inicie a aplicação:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run start
 ```
 
-## Resources
+---
 
-Check out a few resources that may come in handy when working with NestJS:
+## 🛠️ Como Usar
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+1. Faça suas requisições HTTP nos endpoints acima.
+2. Utilize sua chave de API da Riot para autenticação e obtenha as informações dos jogadores e campeões.
+3. Personalize os parâmetros e as consultas para retornar os dados conforme sua necessidade!
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## 🌐 Links Importantes
 
-## Stay in touch
+- [Documentação Oficial da Riot Games API](https://developer.riotgames.com/)
+- [NestJS - Documentação](https://nestjs.com/)
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+## 🦸 Autor
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Feito com 💙 por **Bruno Rodrigues**. Quer saber mais sobre este projeto ou colaborar? Entre em contato!
+
+---
+
+## 🤝 Contribuições
+
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir um **pull request** ou **issue**.
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT.
+
+---
